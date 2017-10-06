@@ -1,0 +1,22 @@
+{
+  "name": "select2-demo",
+  "version": "1.0.0",
+  "description": "Demo for select2.js",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgolyoo/select2-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bgolyoo/select2-demo/issues"
+  },
+  "homepage": "https://github.com/bgolyoo/select2-demo#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "select2": "^4.0.4"
+  }
+}
