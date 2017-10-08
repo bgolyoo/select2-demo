@@ -1,26 +1,299 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./node_modules/select2/dist/css/select2.min.css"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/select2/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/select2/dist/js/select2.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <dir class="row">
-            <dir class="col-md-6">
-                <label for="select2">
-                    Click this to highlight select                            
-                    <select id="select2" multiple style="width: 100%"></select>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-disabled-in-html">
+                    Disbaled in html
                 </label>
-            </dir>
-        </dir>
+                <select id="s2-disabled-in-html" class="form-control" disabled></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-disabled-in-js">
+                    Disbaled in js
+                </label>
+                <select id="s2-disabled-in-js" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-single">
+                    Single select2
+                </label>
+                <select id="s2-single" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-multiple">
+                    Multiple select2
+                </label>
+                <select id="s2-multiple" class="form-control" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-classic-theme-single">
+                    Classic theme for single
+                </label>
+                <select id="s2-classic-theme-single" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-classic-theme-multiple">
+                    Classic theme for multiple
+                </label>
+                <select id="s2-classic-theme-multiple" class="form-control" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-option-groups-in-html">
+                    Option groups in html
+                </label>
+                <select id="s2-option-groups-in-html" class="form-control">
+                    <optgroup label="Group Name">
+                        <option>Nested option</option>
+                    </optgroup>
+                    <optgroup label="Group Name 2">
+                        <option>Nested option 2</option>
+                        <option>Nested option 3</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-option-groups-in-js">
+                    Option groups in js
+                </label>
+                <select id="s2-option-groups-in-js" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-diabled-option-in-html">
+                    Disabled options in html
+                </label>
+                <select id="s2-diabled-option-in-html" class="form-control">
+                    <option value="one">First</option>
+                    <option value="two" disabled="disabled">Second (disabled)</option>
+                    <option value="three">Third</option>
+                </select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-diabled-option-in-js">
+                    Disabled options in html
+                </label>
+                <select id="s2-diabled-option-in-js" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-ajax-example">
+                    Ajax example
+                </label>
+                <select id="s2-ajax-example" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-select-on-close">
+                    Select on close
+                </label>
+                <select id="s2-select-on-close" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-close-on-select">
+                    Force open on select
+                </label>
+                <select id="s2-close-on-select" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-dropdown-parent">
+                    Specify parent element for dropdown
+                </label>
+                <select id="s2-dropdown-parent" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-allow-clear-single">
+                    Allow clear
+                </label>
+                <select id="s2-allow-clear-single" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-allow-clear-multiple">
+                    Allow clear
+                </label>
+                <select id="s2-allow-clear-multiple" class="form-control" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-limit">
+                    Limit selection
+                </label>
+                <select id="s2-limit" class="form-control" multiple="multiple"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-dynamic-option-single">
+                    Dynamic option single
+                </label>
+                <select id="s2-dynamic-option-single" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-dynamic-option-multiple">
+                    Dynamic option multiple
+                </label>
+                <select id="s2-dynamic-option-multiple" class="form-control" multiple="multiple"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-dynamic-option-multiple-token-separator">
+                    Token separator
+                </label>
+                <select id="s2-dynamic-option-multiple-token-separator" class="form-control" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-dynamic-option-multiple-tag-create">
+                    Dynamic tag creator
+                </label>
+                <select id="s2-dynamic-option-multiple-tag-create" class="form-control" multiple="multiple"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-dynamic-option-multiple-tag-placement">
+                    Dynamic tag placement
+                </label>
+                <select id="s2-dynamic-option-multiple-tag-placement" class="form-control" multiple="multiple"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-hide-search">
+                    Hide search box
+                </label>
+                <select id="s2-hide-search" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-minimum-input-length">
+                    Minimum input length to search (3)
+                </label>
+                <select id="s2-minimum-input-length" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-maximum-input-length">
+                    Maximum input length to search (5)
+                </label>
+                <select id="s2-maximum-input-length" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-range-input-length">
+                    Input length to search in range (3 - 5)
+                </label>
+                <select id="s2-range-input-length" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-search-match-example">
+                    Custom search match
+                </label>
+                <select id="s2-search-match-example" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-search-match-group-example">
+                    Custom search match for gouped data
+                </label>
+                <select id="s2-search-match-group-example" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-add-new-option-example">
+                    Add new option
+                </label>
+                <select id="s2-add-new-option-example" class="form-control"></select>
+                <button class="btn btn-primary" onclick="addNewOption()">Add new option</button>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-select-option-example">
+                    Select option
+                </label>
+                <select id="s2-select-option-example" class="form-control"></select>
+                <button class="btn btn-primary" onclick="selectOption()">Select option</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-clean-selection-example">
+                    Clean selection
+                </label>
+                <select id="s2-clean-selection-example" class="form-control"></select>
+                <button class="btn btn-primary" onclick="cleanSelection()">Clean selection</button>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-retrieve-selected-single">
+                    Retrieve selected for single
+                </label>
+                <select id="s2-retrieve-selected-single" class="form-control"></select>
+                <button class="btn btn-primary" onclick="retrieveSelected('s2-retrieve-selected-single')">Retrieve selected</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-retrieve-selected-multiple">
+                    Retrieve selected for multiple
+                </label>
+                <select id="s2-retrieve-selected-multiple" class="form-control" multiple="multiple"></select>
+                <button class="btn btn-primary" onclick="retrieveSelected('s2-retrieve-selected-multiple')">Retrieve selected</button>
+            </div>
+            <div class="col-md-6 example">
+                <button class="btn btn-primary btn-block" onclick="openDropdown()">Open</button>
+                <button class="btn btn-primary btn-block" onclick="closeDropdown()">Close</button>
+                <label for="s2-open-close">
+                    Open and close
+                </label>
+                <select id="s2-open-close" class="form-control"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 example">
+                <label for="s2-events">
+                    Events (logged to console)
+                </label>
+                <select id="s2-events" class="form-control"></select>
+            </div>
+            <div class="col-md-6 example">
+                <label for="s2-language">
+                    Passed custom message (can be used for internalization)
+                </label>
+                <select id="s2-language" class="form-control"></select>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./example-ajax.js"></script>
+    <script type="text/javascript" src="./example-search-match.js"></script>
+    <script type="text/javascript" src="./example-search-match-group.js"></script>
+    <script type="text/javascript" src="./example-add-new-option.js"></script>
+    <script type="text/javascript" src="./example-select-option.js"></script>
+    <script type="text/javascript" src="./example-clean-selection.js"></script>
+    <script type="text/javascript" src="./example-retrieve-selected.js"></script>
+    <script type="text/javascript" src="./example-open-close.js"></script>
+    <script type="text/javascript" src="./example-events.js"></script>
+
 </body>
 
 </html>
