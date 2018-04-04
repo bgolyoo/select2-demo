@@ -26,6 +26,7 @@ $("#s2-ajax-example").select2({
     cache: true
   },
   placeholder: 'Search for a repository',
+  multiple: true,
   escapeMarkup: function (markup) {
     return markup;
   }, // let our custom formatter work
